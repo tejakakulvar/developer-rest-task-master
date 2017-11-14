@@ -29,7 +29,7 @@ class MyRoute extends Route {
    */
   componentWillMount(){
     super.componentWillMount();
-    if(!this.props.data.loggedIn){
+    if(this.props.data.loggedIn){
       console.log('Detected perviously session, redirecting to /dashboard');
       this.context.router.history.replace('/client-dashboard');
     }
@@ -40,12 +40,13 @@ class MyRoute extends Route {
 class App extends Component {
 
   render() {
+    debugger;
     return (
         <Router>
           <div className="wrapper" >
             <MyRoute component={Nav} data={this.props.data.auth} />
             <Switch>
-              <Route exaact path="/" component={HomePage} />
+              <Route exact path="/" component={HomePage} />
               <Route path="/login" component={LoginPage} />
               <Route path="/register" component={RegisterPage} />
               <Route path="/client-dashboard" component={ClientDashboardPage} />
