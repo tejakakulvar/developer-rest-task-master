@@ -1,0 +1,77 @@
+.dashboard {
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+
+.dashboard h1{
+    color: $dark-brand-color;
+}
+
+.dashboard-frame {
+    height:100%;
+    width:100%;
+    position: absolute;
+    min-width: calc(1200px - 16px*2);
+    transition: all 0.3s linear;
+    z-index: 1;
+    opacity:0.2;
+}
+
+.dashboard-frame-active {
+    z-index: 50;
+    opacity:1;
+}
+
+.dashboard-indicator {
+    z-index: 100;
+    position: fixed;
+    margin:auto;
+    height:100px;
+    width:200px;
+    top:180px;
+    bottom:0px;
+    left:20px;
+}
+
+.dashboard-indicator ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    width: 200px;
+    font-size: 14px;
+    font-family: $text-font-stack;
+}
+
+.dashboard-indicator svg{
+    width:20px;
+    height:12px;
+    view-box: 0px 0px 24px 24px;
+    fill: transparent;
+    stroke: $dark-brand-color;
+    stroke-width:4px;
+}
+
+.dashboard-indicator .dashboard-selector-hover svg{
+    fill: $very-light-grey;
+}
+
+.dashboard-indicator .dashboard-selector-active svg{
+    fill: $brand-color;
+}
+
+.dashboard-indicator svg circle{
+    r:8px;
+    cy:12px;
+    cx:12px;
+}
+
+
+
+div.dashboard-gauges {
+    padding-top:20px;
+}
+
+div.world-map {
+
+}

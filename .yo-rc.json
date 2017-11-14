@@ -1,0 +1,9 @@
+{
+  "generator-react-webpack": {
+    "appName": "react-test-task",
+    "style": "scss",
+    "cssmodules": true,
+    "postcss": true,
+    "generatedWithVersion": 4
+  }
+}

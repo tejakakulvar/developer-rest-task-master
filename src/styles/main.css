@@ -1,0 +1,26 @@
+/* Do not write any CSS in here, add it to the appropriate module or make a new one and import it here */
+
+@charset 'UTF-8';
+
+/* 1. Vendors */
+@import 'vendor/normalize';
+
+/* 2. Configuration and helpers */
+@import 'base/helper';
+@import 'utils/variables';
+
+/* 3. Base stuff */
+@import 'base/base';
+@import 'base/font';
+@import 'base/helper';
+@import 'base/typography';
+
+/* 4. Common UI stuff */
+@import 'common/framework';
+@import 'common/buttons';
+@import 'common/form-page';
+@import 'common/form-elements';
+@import 'common/error-message';
+@import 'common/map';
+
+@import 'page/dashboard';
