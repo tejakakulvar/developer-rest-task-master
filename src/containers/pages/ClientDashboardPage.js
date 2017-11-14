@@ -32,8 +32,8 @@ class DashboardPage extends React.Component {
         <div className="dashboard-frame dashboard-gauges">
             <Grid>
                 <Row className="show-grid">
-                    <Col md={9} ><Overview /></Col>
-                    <Col md={3} ><Products /></Col>
+                    <Col md={8} ><Overview /></Col>
+                    <Col md={4} ><Products /></Col>
                 </Row>
             </Grid>
         </div>
