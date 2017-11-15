@@ -10,21 +10,26 @@ const productlist = function() {
         {
               productname: 'My Company Product',
               productdescriptionshort: 'Stylet, Tracheal Tube',
-              sincedate: date
+              sincedate: 'since: '+date
+        },
+        {
+              productname: 'My Company Another Product',
+              productdescriptionshort: 'Stylet, Tracheal Tube',
+              sincedate: 'since: '+date
         }
       ],
       chemistry = [
         {
-              productname: 'My Company Product',
+              productname: 'My Company Another Product',
               productdescriptionshort: 'Stylet, Tracheal Tube',
-              sincedate: date
+              sincedate: 'since: '+date
         }
       ],
       microbiology = [
         {
-              productname: 'My Company Product bio',
-              productdescriptionshort: 'Stylet, Tracheal Tube bio',
-              sincedate: date
+              productname: 'My Company Another Product',
+              productdescriptionshort: 'Stylet, Tracheal Tube',
+              sincedate: 'since: '+date
         }
       ]
     ]

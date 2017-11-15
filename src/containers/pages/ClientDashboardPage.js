@@ -32,8 +32,10 @@ class DashboardPage extends React.Component {
         <div className="dashboard-frame dashboard-gauges">
             <Grid>
                 <Row className="show-grid">
-                    <Col md={8} ><Overview /></Col>
-                    <Col md={4} ><Products /></Col>
+                    <Col md={9} ><Overview /></Col>
+                    <Col md={3} ><Products generalhospital={this.props.data.productlist[0]}
+                                            chemistry = {this.props.data.productlist[1]}
+                                            microbiology = {this.props.data.productlist[2]}/></Col>
                 </Row>
             </Grid>
         </div>
@@ -70,7 +72,7 @@ class DashboardPage extends React.Component {
 // Which props do we want to inject, given the global state?
 function select(state) {
     return {
-        data: state
+        data: state,
     };
 }
 

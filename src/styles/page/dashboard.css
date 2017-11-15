@@ -8,6 +8,40 @@
     color: $dark-brand-color;
 }
 
+.productname {
+  color: $dark-brand-color;
+}
+
+.sincedate {
+  color: grey;
+}
+
+.glyphicon-barcode {
+  font-size: 40px;
+  color:black;
+  padding-top: 10px;
+}
+
+.glyphicon-list{
+  color:grey;
+  font-size: 30px;
+  padding-top: 15px;
+}
+
+.description {
+  color:black;
+}
+
+.list-group-item {
+background-color: transparent;
+border-top: 1px solid #ddd;
+border-radius: 0;
+color: #fff;
+min-width: 500px;
+display:block;
+
+}
+
 .dashboard-frame {
     height:100%;
     width:100%;

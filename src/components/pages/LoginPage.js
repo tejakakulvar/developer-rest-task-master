@@ -42,11 +42,6 @@ class LoginPage extends Component {
     this.dispatch(login.bind(this)(username, password));
   }
 }
-function mapStateToProps(state){
-  return{
-    data: state.auth
-  };
-}
 
 // Apply animation for page
-export default connect(mapStateToProps)(LoginPage);
+export default LoginPage;
