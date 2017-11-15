@@ -8,12 +8,12 @@ class Products extends React.Component {
       //console.log(this.props.data.productlist[0])
         return (
             <div>
-              <h1>Products + </h1>
-              <h4> General Hospital </h4>
+              <h1>Products <span className="glyphicon glyphicon-plus"></span></h1>
+              <h4><b> General Hospital </b></h4>
               <ListGenerator data={this.props.generalhospital}/>
-              <h4> Chemistry </h4>
+              <h4><b> Chemistry </b></h4>
               <ListGenerator data={this.props.chemistry}/>
-              <h4> Microbiology </h4>
+              <h4><b> Microbiology </b></h4>
               <ListGenerator data={this.props.microbiology}/>
             </div>
 

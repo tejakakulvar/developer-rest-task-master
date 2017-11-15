@@ -28,6 +28,8 @@
   padding-top: 15px;
 }
 
+
+
 .description {
   color:black;
 }
@@ -39,7 +41,18 @@ border-radius: 0;
 color: #fff;
 min-width: 500px;
 display:block;
+cursor: pointer;
+}
 
+.list-group-item:hover{
+  background: #D3D3D3;
+}
+
+.glyphicon-chevron-right{
+  color:grey;
+  position:relative;
+  top: -30px;
+  left: 50px;
 }
 
 .dashboard-frame {
@@ -56,7 +69,19 @@ display:block;
     z-index: 50;
     opacity:1;
 }
+.badge-notify{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 15px;
+   border: 1px solid black;
+   background:white;
+   position:relative;
+   top: -25px;
+   left: -10px;
+   color: black;
+   border-radius: 90%;
 
+}
 .dashboard-indicator {
     z-index: 100;
     position: fixed;
