@@ -83,7 +83,6 @@
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
     "react-addons-transition-group": "^15.6.0",
-    "react-awesome-modal": "^2.0.1",
     "react-bootstrap": "^0.31.2",
     "react-css-modules": "^3.7.10",
     "react-d3-map": "^0.8.3",

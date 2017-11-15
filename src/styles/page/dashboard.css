@@ -48,11 +48,22 @@ cursor: pointer;
   background: #D3D3D3;
 }
 
+.backdropStyle  {
+    position: fixed;
+    background-color: yellow;
+    padding: 50
+}
+
 .glyphicon-chevron-right{
   color:grey;
   position:relative;
   top: -30px;
   left: 50px;
+}
+
+.modal{
+  background: transparent;
+  opacity: 0.9;
 }
 
 .dashboard-frame {

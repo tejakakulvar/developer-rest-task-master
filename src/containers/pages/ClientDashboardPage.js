@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import AnimatedPageWrapper from '../../utils/animation/AnimatedPageWrapper';
 import $ from 'jquery';
 import { Grid, Row, Col } from 'react-bootstrap';
+import handlingmodal from '../../actions/client-dashboard/modal';
+import {bindActionCreators} from 'redux';
 
 
 import DistributionMap from '../../components/client-dashboard/DistributionMap';
@@ -35,7 +37,9 @@ class DashboardPage extends React.Component {
                     <Col md={9} ><Overview /></Col>
                     <Col md={3} ><Products generalhospital={this.props.data.productlist[0]}
                                             chemistry = {this.props.data.productlist[1]}
-                                            microbiology = {this.props.data.productlist[2]}/></Col>
+                                            microbiology = {this.props.data.productlist[2]}
+                                            visiblevalue = {this.props.data.visiblevalue}
+                                            handlingmodal={this.props.handlingmodal}/></Col>
                 </Row>
             </Grid>
         </div>
@@ -70,13 +74,17 @@ class DashboardPage extends React.Component {
 }
 
 // Which props do we want to inject, given the global state?
-function select(state) {
+function mapStateToProps(state) {
     return {
         data: state,
     };
 }
 
+function mapDispatchToProps(dispatch){
+ return bindActionCreators({handlingmodal: handlingmodal}, dispatch);
+}
+
 DashboardPage = AnimatedPageWrapper(DashboardPage);
 
 // Wrap the component to inject dispatch and state into it
-export default connect(select)(DashboardPage);
+export default connect(mapStateToProps,mapDispatchToProps)(DashboardPage);
