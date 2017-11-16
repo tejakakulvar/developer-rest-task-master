@@ -12,18 +12,23 @@ class ListGenerator extends React.Component {
     return this.props.data.map((data) => {
       return(
       <li className="list-group-item" key={data.productname} onClick={(event)=>this.handling({data},event)}>
-        <Grid>
-          <Row>
-            <Col md={1}><span className="glyphicon glyphicon-barcode"></span></Col>
-            <Col md={3}>
+        <table>
+          <tr>
+            <td c>
+              <span className="glyphicon glyphicon-barcode"></span>
+            </td>
+            <td className="productlist">
               <div className="productname"><b>{data.productname}</b></div>
               <div className="description">{data.productdescriptionshort}</div>
               <div className="sincedate">{data.sincedate}</div>
-            </Col>
-            <Col md={1} ><span className="glyphicon glyphicon-list"></span><span className="badge badge-notify ">4</span><span className="glyphicon glyphicon-chevron-right"></span></Col>
-          </Row>
-        </Grid>
-
+            </td>
+            <td>
+              <span className="glyphicon glyphicon-list"></span>
+              <span className="badge badge-notify ">4</span>
+              <span className="glyphicon glyphicon-chevron-right"></span>
+            </td>
+          </tr>
+        </table>
       </li>
       );
     }

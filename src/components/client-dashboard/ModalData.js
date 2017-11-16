@@ -14,20 +14,20 @@ class ModalData extends React.Component{
         <Modal show={this.props.visible} onHide={() => this.props.closingmodal()} backdropStyle={backdropStyle}>
         <Modal.Header closeButton>
           <Modal.Title>
-          <Grid>
-            <Row>
-              <Col md={9}>
-                <Row>
-                    <Col md={1}><span className="glyphicon glyphicon-barcode"></span></Col>
-                    <Col md={8}>
-                      <div className="productname"><h4>{this.props.data.productname}</h4></div>
-                      <div className="modalData-descriptionshort">{this.props.data.productdescriptionshort}</div>
-                      <div className="modalData-sincedate">{this.props.data.sincedate}</div>
-                    </Col>
-                </Row>
-              </Col>
-            </Row>
-          </Grid>
+            <Grid>
+              <Row>
+                <Col md={9}>
+                  <Row>
+                      <Col md={1}><span className="glyphicon glyphicon-barcode"></span></Col>
+                      <Col md={8}>
+                        <div className="productname"><h4>{this.props.data.productname}</h4></div>
+                        <div className="modalData-descriptionshort">{this.props.data.productdescriptionshort}</div>
+                        <div className="modalData-sincedate">{this.props.data.sincedate}</div>
+                      </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Grid>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -35,7 +35,7 @@ class ModalData extends React.Component{
             <Row>
               <Col md={8}>
                 <Row>
-                  <Col md={2}><div><img src={this.props.data.imageurl} alt="image" className="img-rounded image"></img></div></Col>
+                  <Col md={2}><div><img src={this.props.data.imageurl} alt="image" className="img-rounded modal-image"></img></div></Col>
                   <Col md={6}>
                     <div className="productname"><h4>Summary</h4></div>
                     <div>{this.props.data.summary}</div>
@@ -48,23 +48,19 @@ class ModalData extends React.Component{
           <div>{this.props.data.description}</div>
         </Modal.Body>
         <Modal.Footer>
-        <Grid>
-          <Row>
-            <Col md={5}>
-              <Row>
-                <Col md={3}>
-                  <Button className="btn btn-primary" type="submit"><span className="glyphicon glyphicon-search"></span> Discovery </Button>
-                </Col>
-                <Col md={6}>
-                  <div className="btn-group" >
-                    <Button className="btn btn-default"><span className="glyphicon glyphicon-edit"></span>  Edit</Button>
-                    <Button className="btn btn-default"><span className="glyphicon glyphicon-trash"></span> Delete</Button>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Grid>
+          <table>
+            <tr>
+              <td className="discoverybutton">
+                <Button className="btn btn-primary pull-left" type="submit"><span className="glyphicon glyphicon-search"></span> Discovery </Button>
+              </td>
+              <td>
+                <div className="btn-group" >
+                  <Button className="btn btn-default"><span className="glyphicon glyphicon-edit"></span>  Edit</Button>
+                  <Button className="btn btn-default"><span className="glyphicon glyphicon-trash"></span> Delete</Button>
+                </div>
+              </td>
+            </tr>
+          </table>
         </Modal.Footer>
       </Modal>
       </div>

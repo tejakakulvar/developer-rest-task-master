@@ -8,67 +8,6 @@
     color: $dark-brand-color;
 }
 
-.productname {
-  color: $dark-brand-color;
-  font-weight: 400;
-}
-
-.sincedate {
-  color: grey;
-}
-
-.glyphicon-barcode {
-  font-size: 40px;
-  color:black;
-  padding-top: 10px;
-}
-
-.glyphicon-list{
-  color:grey;
-  font-size: 30px;
-  padding-top: 15px;
-}
-
-.description {
-  color:black;
-}
-
-.btn.btn-primary{
-  color:white;
-}
-
-.btn-default{
-  text-align: center;
-  color: black;
-}
-.list-group-item {
-background-color: transparent;
-border-top: 1px solid #ddd;
-border-radius: 0;
-color: #fff;
-min-width: 500px;
-display:block;
-cursor: pointer;
-}
-
-.list-group-item:hover{
-  background: #D3D3D3;
-}
-
-
-
-.glyphicon-chevron-right{
-  color:grey;
-  position:relative;
-  top: -30px;
-  left: 50px;
-}
-
-.modal{
-  background: transparent;
-  opacity: 0.9;
-}
-
 .dashboard-frame {
     height:100%;
     width:100%;
@@ -83,34 +22,7 @@ cursor: pointer;
     z-index: 50;
     opacity:1;
 }
-.badge-notify{
-    text-align: center;
-    vertical-align: middle;
-    line-height: 15px;
-   border: 1px solid black;
-   background:white;
-   position:relative;
-   top: -25px;
-   left: -10px;
-   color: black;
-   border-radius: 90%;
-}
-.modalData-descriptionshort{
-  font-size: 90%;
-}
-.modalData-sincedate{
-  font-size: 85%;
-  color: grey;
-}
-.image{
-  border: 1px solid grey;
-  width:120px;
-  height:120px;
-  border-radius: 10px;
-  position: relative;
-  left: -10px;
-  top: 10px;
-}
+
 .dashboard-indicator {
     z-index: 100;
     position: fixed;
@@ -154,12 +66,98 @@ cursor: pointer;
     cx:12px;
 }
 
-
-
 div.dashboard-gauges {
     padding-top:20px;
 }
 
 div.world-map {
 
+}
+.productname {
+    color: $dark-brand-color;
+}
+
+.description {
+    color:black;
+}
+
+.sincedate {
+    color: grey;
+}
+
+.glyphicon-barcode {
+    font-size: 40px;
+    color:black;
+    padding-top: 10px;
+}
+
+.glyphicon-list{
+    color:grey;
+    font-size: 30px;
+    padding-top: 15px;
+}
+
+.badge-notify{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 15px;
+    border: 1px solid black;
+    background:white;
+    position:relative;
+    top: -25px;
+    left: -10px;
+    color: black;
+    border-radius: 90%;
+}
+
+.glyphicon-chevron-right{
+    color:grey;
+    position:relative;
+    top: -30px;
+    left: 50px;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-top: 1px solid #ddd;
+    border-radius: 0;
+    color: #fff;
+    width: 400px;
+    cursor: pointer;
+}
+
+.list-group-item:hover{
+    background: #D3D3D3;
+}
+
+.barcode{
+    width:20%
+}
+
+.productlist{
+    width:65%
+}
+.btn.btn-primary{
+    color:white;
+}
+
+.modalData-descriptionshort{
+    font-size: 90%;
+}
+.modalData-sincedate{
+    font-size: 85%;
+    color: grey;
+}
+.modal-image{
+    border: 1px solid grey;
+    width:120px;
+    height:120px;
+    border-radius: 10px;
+    position: relative;
+    left: -10px;
+    top: 10px;
+}
+
+.discoverybutton{
+    width: 135px;
 }
