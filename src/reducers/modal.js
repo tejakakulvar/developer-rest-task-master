@@ -8,13 +8,10 @@ const modal = {
 export default function(state=modal, action){
   switch(action.type){
     case HANDLING_MODAL:
-      const modalOpen = {
-        visiblevalue: true,
-        data: action.payload.data
-      };
-      return modalOpen;
+      return Object.assign({},state,{visiblevalue:true,data:action.payload.data});
+
     case CLOSING_MODAL:
-      return modal;
+      return Object.assign({},state,{visiblevalue:false});
     }
-  return modal;
+  return state;
 }
