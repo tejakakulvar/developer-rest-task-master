@@ -1,14 +1,17 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import {connect} from 'react-redux';
-import { Modal } from 'react-bootstrap';
-
+import ModalData from './ModalData'
 
 class ListGenerator extends React.Component {
+  handling({data},event){
+    event.preventDefault();
+    this.props.handlingmodal({data});
+  }
   renderList(){
     return this.props.data.map((data) => {
       return(
-      <li className="list-group-item" key={data.productname} onClick={() => this.props.handlingmodal(true)}>
+      <li className="list-group-item" key={data.productname} onClick={(event)=>this.handling({data},event)}>
         <Grid>
           <Row>
             <Col md={1}><span className="glyphicon glyphicon-barcode"></span></Col>
@@ -20,7 +23,8 @@ class ListGenerator extends React.Component {
             <Col md={1} ><span className="glyphicon glyphicon-list"></span><span className="badge badge-notify ">4</span><span className="glyphicon glyphicon-chevron-right"></span></Col>
           </Row>
         </Grid>
-        </li>
+
+      </li>
       );
     }
 
@@ -28,27 +32,12 @@ class ListGenerator extends React.Component {
   }
   render(){
 
-    const backdropStyle = {
-    backgroundColor: 'grey',
-    opacity: 0.1
-  };
-  console.log(this.props.visible);
     return(
       <div>
         <ul className="list-group">
           {this.renderList()}
         </ul>
-        <Modal show={this.props.visible} onHide={() => this.props.handlingmodal(false)} backdropStyle={backdropStyle}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <h4>Text in a modal</h4>
-          </Modal.Body>
-          <Modal.Footer>
-          <h4>Text in a modal</h4>
-          </Modal.Footer>
-        </Modal>
+        <ModalData closingmodal={this.props.closingmodal} data={this.props.modal.data} visible={this.props.modal.visiblevalue} handlingmodal = {this.props.handlingmodal}/>
       </div>
     )
   }

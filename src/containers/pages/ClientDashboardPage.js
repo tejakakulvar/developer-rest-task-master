@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import AnimatedPageWrapper from '../../utils/animation/AnimatedPageWrapper';
 import $ from 'jquery';
 import { Grid, Row, Col } from 'react-bootstrap';
-import handlingmodal from '../../actions/client-dashboard/modal';
+import {handlingmodal , closingmodal} from '../../actions/client-dashboard/modal';
 import {bindActionCreators} from 'redux';
 
 
@@ -38,8 +38,9 @@ class DashboardPage extends React.Component {
                     <Col md={3} ><Products generalhospital={this.props.data.productlist[0]}
                                             chemistry = {this.props.data.productlist[1]}
                                             microbiology = {this.props.data.productlist[2]}
-                                            visiblevalue = {this.props.data.visiblevalue}
-                                            handlingmodal={this.props.handlingmodal}/></Col>
+                                            modal = {this.props.data.modal}
+                                            handlingmodal={this.props.handlingmodal}
+                                            closingmodal={this.props.closingmodal}/></Col>
                 </Row>
             </Grid>
         </div>
@@ -81,7 +82,11 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch){
- return bindActionCreators({handlingmodal: handlingmodal}, dispatch);
+  const actions = {
+    handlingmodal: handlingmodal,
+    closingmodal: closingmodal
+  }
+ return bindActionCreators(actions, dispatch);
 }
 
 DashboardPage = AnimatedPageWrapper(DashboardPage);
